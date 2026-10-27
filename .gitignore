@@ -12,3 +12,8 @@ __pycache__/
 
 # Adzuna job advertisement datasets
 data/*.csv
+# Allow synthetic demonstration data only
+!data/uk_jobs_demo.csv
+
+# Local backup files
+*.bak

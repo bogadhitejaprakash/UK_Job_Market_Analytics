@@ -168,18 +168,24 @@ div[data-baseweb="input"] > div {
 
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 
-DATA_FILE = (
-    PROJECT_DIR
-    / "data"
-    / "uk_jobs_employment_sample.csv"
-)
+REAL_DATA_FILE = PROJECT_DIR / "data" / "uk_jobs_employment_sample.csv"
+DEMO_DATA_FILE = PROJECT_DIR / "data" / "uk_jobs_demo.csv"
 
-if not DATA_FILE.exists():
-    st.error(
-        "Dataset not found. Run "
-        "`python notebooks/visualize_jobs.py` first."
-    )
+if REAL_DATA_FILE.exists():
+    DATA_FILE = REAL_DATA_FILE
+    USING_DEMO_DATA = False
+elif DEMO_DATA_FILE.exists():
+    DATA_FILE = DEMO_DATA_FILE
+    USING_DEMO_DATA = True
+else:
+    st.error("Dataset not found. Prepare local data or generate demo data.")
     st.stop()
+
+if USING_DEMO_DATA:
+    st.warning(
+        "SYNTHETIC DEMO DATA: All displayed jobs and salaries are fictional. "
+        "These are not real UK job market statistics."
+    )
 
 
 @st.cache_data
