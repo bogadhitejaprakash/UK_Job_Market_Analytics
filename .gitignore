@@ -1,0 +1,14 @@
+.venv/
+.env
+__pycache__/
+*.pyc
+# Python environment
+.venv/
+__pycache__/
+*.pyc
+
+# API credentials
+.env
+
+# Adzuna job advertisement datasets
+data/*.csv
