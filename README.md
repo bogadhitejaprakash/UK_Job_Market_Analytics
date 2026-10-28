@@ -64,7 +64,7 @@ UK_Job_Market_Analytics/
 │   └── check_descriptions.py
 │
 ├── data/
-│   └── (local datasets excluded from GitHub)
+│   └── (Adzuna datasets excluded; synthetic demo CSV included)
 │
 ├── collect_jobs.py
 ├── requirements.txt
@@ -170,7 +170,7 @@ API usage is subject to your account's limits and the data provider's terms.
 python -m streamlit run dashboard/app.py
 ```
 
-**Note:** This repository does not include the collected job advertisement datasets or a hosted dashboard. The dashboard requires locally prepared data.
+**Note:** The collected Adzuna datasets are excluded from this repository. A public dashboard is available using fictional demonstration data. The hosted dashboard automatically loads the included synthetic dataset. Running the original Adzuna analysis locally requires the separately collected datasets.
 
 ## 🚀 Future Improvements
 
@@ -178,7 +178,7 @@ python -m streamlit run dashboard/app.py
 * Improve job advertisement classification.
 * Explore more reliable skills-demand extraction.
 * Add historical comparisons.
-* Create a synthetic demonstration dataset for public dashboard deployment.
+* Expand and improve the synthetic demonstration dataset.
 * Improve automated data validation.
 
 ## 👨‍💻 About This Project
@@ -186,3 +186,26 @@ python -m streamlit run dashboard/app.py
 This portfolio project demonstrates practical skills in Python programming, API integration, data cleaning, exploratory analysis, visualization, and interactive dashboard development.
 
 It was developed as part of a data analytics portfolio focused on real-world business and employment questions.
+
+---
+
+## Live Interactive Dashboard
+
+**[Launch UK Job Market Analytics Dashboard](https://ukjobmarketanalytics-aglfyhkx9xdqhzkkzztujv.streamlit.app/)**
+
+Explore the interactive dashboard featuring:
+
+- Job market overview and summary metrics
+- Salary analysis and visualisations
+- Location-based job analysis
+- Interactive job explorer
+- Filters for exploring job listings
+- Apple-inspired Liquid Glass interface
+
+### Important: Demonstration Data
+
+The publicly hosted dashboard uses **10 entirely synthetic job listings** created for educational and portfolio demonstration purposes.
+
+All companies, vacancies and salary figures displayed in the hosted dashboard are fictional. They do not represent actual UK employment statistics.
+
+The original analysis uses a separate, small sample of job advertisements collected through the Adzuna API. Those datasets and API credentials are not included in this public repository.
