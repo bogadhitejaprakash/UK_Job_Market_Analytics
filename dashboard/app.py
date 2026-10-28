@@ -383,11 +383,14 @@ st.markdown(
 st.markdown(
     """
 <div class="glass-note">
-    <strong>Research sample:</strong>
-    These charts describe a small collection of advertisements,
-    not the entire UK labour market.
-    Salary figures may be estimates, and daily-rate
-    classifications are preliminary.
+    <strong>About this dashboard:</strong>
+    This interactive dashboard demonstrates UK job market
+    analytics using Python, Pandas, Plotly and Streamlit.
+    The public version uses synthetic job listings created
+    for educational and portfolio purposes.
+    All displayed companies, vacancies and salary figures
+    are fictional and should not be interpreted as real
+    UK employment statistics.
 </div>
     """,
     unsafe_allow_html=True
